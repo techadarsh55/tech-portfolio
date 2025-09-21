@@ -1,26 +1,34 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+ --background-1: #0064e0;
+  --background-2: #0082FB;
+  --foreground-1: #f1f5f8;
+  --foreground-2: #1c2b33;
+  --font-geist-sans: 'Geist Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-geist-mono: 'Geist Mono', SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: var(--background-1);
+  --color-foreground: var(--foreground-1);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #ededed;
-    --foreground: #0a0a0a;
+    --background-1: #0064e0;
+    --background-2: #0082FB;
+    --foreground-1: #f1f5f8;
+    --foreground-2: #1c2b33;
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--foreground-1);
+  color: var(--foreground-2);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
