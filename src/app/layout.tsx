@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "TechAdarsh Portfolio",
+  title: "TechAdarsh - Portfolio",
   description: "adarsh admane's portfolio website",
 };
 
@@ -25,6 +26,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+      </head>
       <body
         className=""
         >
@@ -33,6 +37,7 @@ export default function RootLayout({
             <Navbar />
           </div>
           {children}
+          <Footer />
         </div>
       </body>
     </html>

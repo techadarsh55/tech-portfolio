@@ -35,11 +35,11 @@ export default function Navbar() {
                         <Link href="/" onClick={() => setMenuOpen(false)}>Home</Link>
                     </li>
                     <li>
-                        <Link href="/projects" onClick={() => setMenuOpen(false)}>Projects</Link>
+                        <Link href="/projects" onClick={() => setMenuOpen(false)}>Works</Link>
                     </li>
                     <li>
                         <Link 
-                            href="/contact"
+                            href="#contact-me"
                             className="font-bold text-lg p-2 rounded-full"
                             style={{background: "var(--background-1)", color: "var(--foreground-1)" }}
                         >
@@ -68,7 +68,7 @@ export default function Navbar() {
                 </li>
                 <li 
                     className="w-full text-center :hover:bg-background-2 :hover:text-foreground-2 p-1 rounded-2xl">
-                    <Link href="/projects" onClick={() => setMenuOpen(false)}>Projects</Link>
+                    <Link href="/projects" onClick={() => setMenuOpen(false)}>Works</Link>
                 </li>
                 <li 
                     className="w-full text-center :hover:bg-background-2 :hover:text-foreground-2 p-1 rounded-2xl">

@@ -65,6 +65,7 @@ export default function Projects() {
 
     React.useEffect(() => {
         // Simulate fetching data from an API
+        // getData('https://')
         getData('https://t1c9s2lsj8.execute-api.us-east-1.amazonaws.com/default/MyProjectDetails')
         .then(data => {
             console.log("Fetched project data:", data);
@@ -79,63 +80,34 @@ export default function Projects() {
 
     return (
     <>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-
+    <div className="p-8 pb-20">
+        <div className="mb-5">
+            <h1 className="font-bold mb-2 text-2xl lg:text-4xl md:text-3xl inline-he-block text-[#1c2b33]">My Work</h1>
+            <p className="text-gray-400 text-xl">Here’s a selection of projects I’ve built, showcasing my skills across frontend, backend, databases, and UI design.</p>
+        </div>
+        {/* Project Cards Grid */}
+        <div className="grid grid-cols-1 p-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {projectData ? projectData.map((project: any) => (
             <div className="bg-white rounded-2xl shadow-md overflow-hidden" key={project.id}>
             <Image 
-                src="/images/project1.png" 
-                alt="Project 1" 
+                src={project.image || "/images/project1.png"}
+                alt={project.name || ""} 
                 width={400} 
                 height={200}
                 className="w-full h-48 object-cover"
             />
             <div className="p-4">
                 <h3 className="text-xl font-bold mb-2">{project.name}</h3>
-                <p className="text-gray-600 mb-4">{project.description}</p>
-                <a href="#" className="text-blue-500 hover:underline" data-id={project.id}>View Project</a>
+                <p className="text-gray-600 mb-4 line-clamp-3">{project.description}</p>
+                <a href={`/projects/${project.id}`} className="text-blue-500 hover:underline" data-id={project.id}>
+                    <span className="font-bold">View Details</span> &rarr;
+                </a>
             </div>
             </div>
         )) : ''}
 
-        {/* Project 2 */}
-        <div className="bg-white rounded-2xl shadow-md overflow-hidden">
-          <Image 
-            src="/images/project2.png" 
-            alt="Project 2" 
-            width={400} 
-            height={200}
-            className="w-full h-48 object-cover"
-          />
-          <div className="p-4">
-            <h3 className="text-xl font-bold mb-2">Blog Platform</h3>
-            <p className="text-gray-600 mb-4">
-              Created a dynamic blog platform with Flask and Vue.js, featuring user authentication, post creation, and commenting functionality.
-            </p>
-            <a href="#" className="text-blue-500 hover:underline">View Project</a>
-          </div>
         </div>
-
-        {/* Project 3 */}
-        <div className="bg-white rounded-2xl shadow-md overflow-hidden">
-          <Image 
-            src="/images/project3.png" 
-            alt="Project 3" 
-            width={400} 
-            height={200}
-            className="w-full h-48 object-cover"
-          />
-          <div className="p-4">
-            <h3 className="text-xl font-bold mb-2">Task Management App</h3>
-            <p className="text-gray-600 mb-4">
-              Built a task management application using FastAPI and Svelte, allowing users to create, update, and track tasks efficiently.
-            </p>
-            <a href="#" className="text-blue-500 hover:underline">View Project</a>
-          </div>
-        </div>
-
-        {/* Add more projects as needed */}
-        </div>
+    </div>
     </>
     )
 }

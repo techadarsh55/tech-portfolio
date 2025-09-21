@@ -1,6 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import Projects from "./projects/page";
+import Footer from "@/components/Footer";
+import Services from "./services/page";
+import Contact from "./contact/page";
 
 export default function Home() {
   return (
@@ -22,10 +25,10 @@ export default function Home() {
         </div> */}
         <div className="flex gap-4 pt-6">
           <button
-            className="font-bold p-4 px-8 text-xl rounded-full mt-8 bg-[#0064ec] text-white"
+            className="font-bold p-4 px-8 lg:text-xl md:text-xl rounded-full mt-8 bg-[#0064ec] text-white sm:text-lg"
             >Contact Me</button>
           <button
-            className="font-bold p-4 px-8 text-xl rounded-full mt-8 bg-[#ffffff] border-2 text-[#0064ec] :hover:background-[#0064ec] :hover:text-white cursor-pointer"
+            className="font-bold p-4 px-8 lg:text-xl md:text-xl rounded-full sm:text-lg mt-8 bg-[#ffffff] border-2 text-[#0064ec] :hover:background-[#0064ec] :hover:text-white cursor-pointer"
             >Projects</button>
         </div>
       </div>
@@ -36,7 +39,7 @@ export default function Home() {
           alt="adarsh admane" 
           width={512} 
           height={512}
-          className="rounded-full min-w-[512px]"
+          className="rounded-full lg:min-w-[512px] md:min-w-[450px] sm:min-w-[250px]"
           />
           
       </div>
@@ -70,18 +73,21 @@ export default function Home() {
       </ul>
     </div>
 
-    {/* Project Sections */}
+    {/* service provide */}
+    <div>
+      <Services />
+    </div>
 
-    <div className="p-8 pb-20">
-      <h2 className="text-3xl font-bold my-8">Projects</h2>  
+    {/* Project Sections */}
+    <div className="">       
       <Projects />    
     </div>
 
-
     {/* contact form */}
+    <section id="#contact-me">
+      <Contact />
+    </section>
 
-
-    
     </>
   );
 }
