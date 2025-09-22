@@ -1,4 +1,6 @@
 "use client";
+import { ConatactIcon, EmailIcon, LocationIcon } from "@/lib/icons";
+import Image from "next/image";
 import { useState } from "react";
 
 export default function Contact() {
@@ -26,79 +28,113 @@ export default function Contact() {
   };
 
   return (
-    <div className="p-8 pb-20">
-      <div className="mb-5">
-        <h1 className="font-bold mb-2 text-2xl lg:text-4xl md:text-3xl text-[#1c2b33]">
-          Get in Touch
-        </h1>
-        <p className="text-gray-400 text-xl">
-          Feel free to reach out for collaborations or just a friendly hello!
-        </p>
+    <div className="p-8 pb-20 min-h-screen">
+      <div className="text-center mb-10">
+          <strong className="text-xl mb-3">CONTACT <span className="text-[#0064ec]">ME</span></strong>
+          <h1 className="text-2xl sm:text-2xl lg:text-4xl md:text-3xl font-bold">I'm always open to<br/> <span className="text-[#0064ec]">discussion time spand</span></h1>
       </div>
 
-      <div className="max-w-3xl bg-white p-6 rounded-2xl shadow-md">
-        <form onSubmit={handleSubmit} className="space-y-4">
+      <div className="flex justify-evenly text-center mb-10 gap-10 flex-wrap">
+        <div>
+          <span className="mb-2 bg-[#0064ec] text-white p-2 rounded-full inline-block">
+            <ConatactIcon />
+          </span>
+          <p className="text-[#0064ec] font-bold">Phone</p>
+          <p className="font-bold text-gray-500">+91 (86930-85008)</p>
+        </div>
+        <div>
+          <span className="mb-2 bg-[#0064ec] text-white p-2 rounded-full inline-block">
+            <EmailIcon />
+          </span>
+          <p className="text-[#0064ec] font-bold">Email</p>
           <div>
-            <label
-              htmlFor="name"
-              className="block text-sm font-medium text-gray-700"
-            >
-              Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              required
-              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500"
-            />
+            <p className="font-bold text-gray-500">tech.adarsh55@gmail.com</p>
+            <p className="font-bold text-gray-500">adarsh.admane55@gmail.com</p>
           </div>
+        </div>
+        <div>
+          <span className="mb-2 bg-[#0064ec] text-white p-2 rounded-full inline-block">
+            <LocationIcon />
+          </span>
+          <p className="text-[#0064ec] font-bold">Location</p>
+          <p className="font-bold text-gray-500">Navi Mumbai, India</p>
+        </div>
+      </div>
 
-          <div>
-            <label
-              htmlFor="email"
-              className="block text-sm font-medium text-gray-700"
-            >
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              required
-              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500"
-            />
-          </div>
+      {/* form */}
+      <div className="flex flex-wrap justify-around gap-10 place-items-center">
+        <div>
+          <Image 
+          src="/images/contact-me-pixar.png"
+          alt="contact-me"
+          width={350}
+          height={350}
+          className="lg:min-w-[450px] md:min-w-[200px] sm:min-w-[150px]"
+           />
+        </div>
+        <div className="min-w-3xl bg-white p-6 rounded-2xl shadow-md">
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div>
+              <label
+                htmlFor="name"
+                className="block text-sm font-medium text-gray-700"
+              >
+                Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500"
+              />
+            </div>
 
-          <div>
-            <label
-              htmlFor="message"
-              className="block text-sm font-medium text-gray-700"
-            >
-              Message
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              rows={4}
-              required
-              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500"
-            ></textarea>
-          </div>
+            <div>
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium text-gray-700"
+              >
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500"
+              />
+            </div>
 
-          <div>
-            <button
-              type="submit"
-              className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition"
-            >
-              Send Message
-            </button>
-          </div>
-        </form>
+            <div>
+              <label
+                htmlFor="message"
+                className="block text-sm font-medium text-gray-700"
+              >
+                Message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows={4}
+                required
+                className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500"
+              ></textarea>
+            </div>
 
-        {status && (
-          <p className="mt-4 text-sm text-gray-700 font-medium">{status}</p>
-        )}
+            <div>
+              <button
+                type="submit"
+                className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition"
+              >
+                Send Message
+              </button>
+            </div>
+          </form>
+          {status && (
+            <p className="mt-4 text-sm text-gray-700 font-medium">{status}</p>
+          )}
+        </div>
       </div>
     </div>
   );

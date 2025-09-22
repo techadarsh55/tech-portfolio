@@ -4,6 +4,7 @@ import Projects from "./projects/page";
 import Footer from "@/components/Footer";
 import Services from "./services/page";
 import Contact from "./contact/page";
+import Skills from "./skills/page";
 
 export default function Home() {
   return (
@@ -35,11 +36,11 @@ export default function Home() {
       <div>
         
         <Image 
-          src="/images/adarsh-pixar-transperent.png" 
+          src="/images/Mask group.png" 
           alt="adarsh admane" 
           width={512} 
           height={512}
-          className="rounded-full lg:min-w-[512px] md:min-w-[450px] sm:min-w-[250px]"
+          className="lg:min-w-[512px] md:min-w-[450px] sm:min-w-[250px] rounded-b-full"
           />
           
       </div>
@@ -84,7 +85,7 @@ export default function Home() {
     </div>
 
     {/* contact form */}
-    <section id="#contact-me">
+    <section>
       <Contact />
     </section>
 

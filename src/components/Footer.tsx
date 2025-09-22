@@ -2,7 +2,17 @@
 import React from "react";
 import { TechAdrashLogo } from "@/lib/icons";
 
+
+
 export default function Footer() {
+    const navigation = [
+        { name: 'Home', href: '/' , solid: false},
+        { name: 'About', href: '/about', solid: false },
+        { name: 'Services', href: '/services', solid: false },
+        { name: 'Works', href: '/projects', solid: false },
+        { name: 'Contact Me', href: '/contact', solid: true },
+    ]
+
     return (
         <>
             <div className="p-8 pb-10 bg-[#1c2b33] text-white rounded-t-3xl relative bottom-0 w-full">
@@ -17,9 +27,9 @@ export default function Footer() {
                     <hr className="bg-gray-500 h-1"/>
                     <div>
                         <ul className="flex gap-4 text-lg" style={{fontFamily: "var(--font-geist-sans)"}}>
-                            <li className="pb-2"><a href="/" className="hover:underline">Home</a></li>
-                            <li className="pb-2"><a href="/about" className="hover:underline">About</a></li>
-                            <li className="pb-2"><a href="/projects" className="hover:underline">Projects</a></li>
+                            {navigation.map((item) => (
+                                <li className="pb-2" key={item.name}><a href={item.href} className="hover:underline">{item.name}</a></li>   
+                            ))}
                         </ul>
                         <ul className="flex gap-4 text-lg justify-evenly lg:justify-start md:justify-start sm:justify-center" style={{fontFamily: "var(--font-geist-sans)"}}>
                             <li className="pb-2"><a href="https://github.com/techadarsh55" className="hover:underline"><i className="fab fa-lg fa-github"></i></a></li>

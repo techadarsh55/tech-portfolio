@@ -80,11 +80,12 @@ export default function Projects() {
 
     return (
     <>
-    <div className="p-8 pb-20">
-        <div className="mb-5">
-            <h1 className="font-bold mb-2 text-2xl lg:text-4xl md:text-3xl inline-he-block text-[#1c2b33]">My Work</h1>
-            <p className="text-gray-400 text-xl">Here’s a selection of projects I’ve built, showcasing my skills across frontend, backend, databases, and UI design.</p>
+    <div className="p-8 pb-20 min-h-screen">
+        <div className="text-center mb-10">
+          <strong className="text-xl mb-3">FEATURE <span className="text-[#0064ec]">WORKS</span></strong>
+          <h1 className="text-2xl sm:text-2xl lg:text-4xl md:text-3xl font-bold">A showcase of selected projects that reflect my<br/> <span className="text-[#0064ec]">skills and creativity</span></h1>
         </div>
+        
         {/* Project Cards Grid */}
         <div className="grid grid-cols-1 p-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {projectData ? projectData.map((project: any) => (
