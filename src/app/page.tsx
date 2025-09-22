@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import Services from "./services/page";
 import Contact from "./contact/page";
 import Skills from "./skills/page";
+import About from "./about/page";
 
 export default function Home() {
   return (
@@ -46,32 +47,9 @@ export default function Home() {
       </div>
     </div>
 
-    {/* About Us Section */}
-    <div
-      className="bg-[#0064ec] text-white p-8 pb-20 rounded-b-3xl">
-      <h2 className="text-3xl font-bold mb-4">About Me</h2>
-      <p className="text-lg">
-        I'm Adarsh Admane, a passionate Python Fullstack Developer with expertise in building robust web applications. I specialize in both frontend and backend development, ensuring seamless user experiences and efficient server-side operations. With a strong foundation in Python, I leverage frameworks like Django and Flask to create scalable solutions. My skills extend to database management, UI/UX design, and integrating modern technologies to deliver high-quality software products. Let's connect and bring your ideas to life!
-      </p>
-      <br/>
-      <strong className="text-2xl pb-4">Skills</strong>
-      <ul>
-        <li className="pb-2">
-          <strong><span>&#10158;</span> Frontend:</strong> JavaScript, ReactJs, NextJs, HTML, CSS, BootStrap, TailwindCSS, heroui
-        </li>
-        <li className="pb-2">
-          <strong><span>&#10158;</span> Backend:</strong> Python, Django, Flask, FastAPI, ExpressJs, NodeJS
-        </li>
-        <li className="pb-2">
-          <strong><span>&#10158;</span> Databses:</strong> MySQL, PostgreSQL, MongoDB, S3 buckets
-        </li>
-        <li className="pb-2">
-          <strong><span>&#10158;</span> Others:</strong> REST API, GraphQL, Docker, Git, GitHub, CI/CD, AWS, Netlify
-        </li>
-        <li>
-          <strong>Experience:</strong> 4+ years in fullstack development, working on diverse projects ranging from small business websites to complex web applications.
-        </li>       
-      </ul>
+    {/* about us  */}
+    <div>
+      <About />
     </div>
 
     {/* service provide */}

@@ -1,9 +1,30 @@
 import Image from "next/image";
 import React from "react";
 
-interface ServiesProps {
-
+interface skillsProps {
+    name: string;
+    icon: string;
+    imgSrc: string;
 }
+
+const skillList = [
+    { name: "Python", icon: "python", imgSrc: "/skills/python.webp" },
+    { name: "Django", icon: "django", imgSrc: "/skills/django.jpg" },
+    { name: "FastAPI", icon: "fastapi", imgSrc: "/skills/fastapi.jpg" },
+    { name: "Flask", icon: "flask", imgSrc: "/skills/flask.jpg" },
+    { name: "React", icon: "react", imgSrc: "/skills/react.webp" },
+    { name: "Nextjs", icon: "nextjs", imgSrc: "/skills/nextjs.png" },
+    { name: "BootStrap", icon: "bootstrap", imgSrc: "/skills/bootstrap.webp" },
+    { name: "JQuery", icon: "jquery", imgSrc: "/skills/jquery.gif" },
+    { name: "MySQL", icon: "mysql", imgSrc: "/skills/mysql.png" },
+    { name: "PostgreSQL", icon: "postgresql", imgSrc: "/skills/postgresql.png" },
+    { name: "AWS", icon: "aws", imgSrc: "/skills/aws.png" },
+    { name: "Docker", icon: "docker", imgSrc: "/skills/docker.png" },
+    { name: "Figma", icon: "figma", imgSrc: "/skills/figma.png" },
+    { name: "Github", icon: "github", imgSrc: "/skills/github.png" },
+    { name: "Apache", icon: "apache", imgSrc: "/skills/apache.png" },
+    { name: "VSCode", icon: "vscode", imgSrc: "/skills/vscode.png" }
+]
 
 export default function Services() {
     return (
@@ -14,153 +35,21 @@ export default function Services() {
                 <strong className="text-xl  mb-3">MY <span className="text-[#0064ec]">SKILLS</span></strong>
                 <h1 className="text-2xl sm:text-2xl lg:text-4xl md:text-3xl font-bold">Expert in this technical <br/> <span className="text-[#0064ec]">coding & softwares</span></h1>
             </div>
-            
+
             {/* coding list */}
             <div className="flex flex-wrap justify-center sm:p-4 sm:gap-5 lg:gap-8 lg:p-10 md:p-8 md:gap-6 gap-4">
-                <div className="bg-white p-4 rounded-xl flex flex-col gap-2 items-center shadow-md hover:scale-105 transition-transform duration-300">
-                    <Image
-                        src=""
-                        alt="python"
-                        width={50}
-                        height={50}
-                            />
-                    <p className="text-center font-bold">Python</p>
-                </div>
-                <div className="bg-white p-4 rounded-xl flex flex-col gap-2 items-center shadow-md hover:scale-105 transition-transform duration-300">
-                    <Image
-                        src=""
-                        alt="python"
-                        width={50}
-                        height={50}
-                            />
-                    <p className="text-center font-bold">Django</p>
-                </div>
-                <div className="bg-white p-4 rounded-xl flex flex-col gap-2 items-center shadow-md hover:scale-105 transition-transform duration-300">
-                    <Image
-                        src=""
-                        alt="python"
-                        width={50}
-                        height={50}
-                            />
-                    <p className="text-center font-bold">FastAPI</p>
-                </div>
-                <div className="bg-white p-4 rounded-xl flex flex-col gap-2 items-center shadow-md hover:scale-105 transition-transform duration-300">
-                    <Image
-                        src=""
-                        alt="python"
-                        width={50}
-                        height={50}
-                            />
-                    <p className="text-center font-bold">Flask</p>
-                </div>
-                <div className="bg-white p-4 rounded-xl flex flex-col gap-2 items-center shadow-md hover:scale-105 transition-transform duration-300">
-                    <Image
-                        src=""
-                        alt="python"
-                        width={50}
-                        height={50}
-                            />
-                    <p className="text-center font-bold">React</p>
-                </div>
-                <div className="bg-white p-4 rounded-xl flex flex-col gap-2 items-center shadow-md hover:scale-105 transition-transform duration-300">
-                    <Image
-                        src=""
-                        alt="python"
-                        width={50}
-                        height={50}
-                            />
-                    <p className="text-center font-bold">Nextjs</p>
-                </div>
-                <div className="bg-white p-4 rounded-xl flex flex-col gap-2 items-center shadow-md hover:scale-105 transition-transform duration-300">
-                    <Image
-                        src=""
-                        alt="python"
-                        width={50}
-                        height={50}
-                            />
-                    <p className="text-center font-bold">BootStrap</p>
-                </div>
-                <div className="bg-white p-4 rounded-xl flex flex-col gap-2 items-center shadow-md hover:scale-105 transition-transform duration-300">
-                    <Image
-                        src=""
-                        alt="python"
-                        width={50}
-                        height={50}
-                            />
-                    <p className="text-center font-bold">JQuery</p>
-                </div>
-                <div className="bg-white p-4 rounded-xl flex flex-col gap-2 items-center shadow-md hover:scale-105 transition-transform duration-300">
-                    <Image
-                        src=""
-                        alt="python"
-                        width={50}
-                        height={50}
-                            />
-                    <p className="text-center font-bold">MySQL</p>
-                </div>
-                <div className="bg-white p-4 rounded-xl flex flex-col gap-2 items-center shadow-md hover:scale-105 transition-transform duration-300">
-                    <Image
-                        src=""
-                        alt="python"
-                        width={50}
-                        height={50}
-                            />
-                    <p className="text-center font-bold">PostgreSQL</p>
-                </div>
-                <div className="bg-white p-4 rounded-xl flex flex-col gap-2 items-center shadow-md hover:scale-105 transition-transform duration-300">
-                    <Image
-                        src=""
-                        alt="python"
-                        width={50}
-                        height={50}
-                            />
-                    <p className="text-center font-bold">AWS</p>
-                </div>
-                <div className="bg-white p-4 rounded-xl flex flex-col gap-2 items-center shadow-md hover:scale-105 transition-transform duration-300">
-                    <Image
-                        src=""
-                        alt="python"
-                        width={50}
-                        height={50}
-                            />
-                    <p className="text-center font-bold">Docker</p>
-                </div>
-                <div className="bg-white p-4 rounded-xl flex flex-col gap-2 items-center shadow-md hover:scale-105 transition-transform duration-300">
-                    <Image
-                        src=""
-                        alt="python"
-                        width={50}
-                        height={50}
-                            />
-                    <p className="text-center font-bold">Figma</p>
-                </div>
-                <div className="bg-white p-4 rounded-xl flex flex-col gap-2 items-center shadow-md hover:scale-105 transition-transform duration-300">
-                    <Image
-                        src=""
-                        alt="python"
-                        width={50}
-                        height={50}
-                            />
-                    <p className="text-center font-bold">Github</p>
-                </div>
-                <div className="bg-white p-4 rounded-xl flex flex-col gap-2 items-center shadow-md hover:scale-105 transition-transform duration-300">
-                    <Image
-                        src=""
-                        alt="python"
-                        width={50}
-                        height={50}
-                            />
-                    <p className="text-center font-bold">Apache</p>
-                </div>
-                <div className="bg-white p-4 rounded-xl flex flex-col gap-2 items-center shadow-md hover:scale-105 transition-transform duration-300">
-                    <Image
-                        src=""
-                        alt="python"
-                        width={50}
-                        height={50}
-                            />
-                    <p className="text-center font-bold">VSCode</p>
-                </div>                
+                {skillList.map((skill: skillsProps) => (
+                    <div className="bg-white p-4 rounded-xl flex flex-col gap-2 items-center shadow-md hover:scale-105 transition-transform duration-300">
+                        <Image
+                            src={skill.imgSrc}
+                            alt={skill.name}
+                            width={50}
+                            height={50}
+                            className="rounded-xl"
+                                />
+                        <p className="text-center font-bold">{skill.name}</p>
+                    </div>
+                ))}             
             </div>
         </div>   
 
