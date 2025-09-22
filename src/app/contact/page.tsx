@@ -12,11 +12,12 @@ export default function Contact() {
 
     const form = e.currentTarget;
     const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
 
-    const res = await fetch("https://formspree.io/f/mayvlrze", {
+    const res = await fetch("https://dem6sb1n8f.execute-api.us-east-1.amazonaws.com/default/ContactUs", {
       method: "POST",
-      body: formData,
-      headers: { Accept: "application/json" },
+      body: JSON.stringify(data),
+      headers: { "Content-Type": "application/json" },
     });
 
     if (res.ok) {
@@ -125,8 +126,9 @@ export default function Contact() {
             <div>
               <button
                 type="submit"
-                className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition"
+                className="bg-blue-500 text-white font-semibold px-4 py-2 rounded-3xl hover:bg-blue-600 transition"
               >
+                <i className="fa-solid fa-paper-plane pr-2"></i>
                 Send Message
               </button>
             </div>

@@ -41,7 +41,7 @@ export default function Navbar() {
                     className="hidden sm:flex gap-4 ml-auto place-items-center" 
                     style={{fontFamily: "var(--font-geist-sans)"}}>
                         {navigation.map((item) => (
-                            <li>                    
+                            <li key={item.name}>                    
                                 <Link 
                                     href={item.href} 
                                     onClick={() => setMenuOpen(false)}
@@ -65,11 +65,11 @@ export default function Navbar() {
                 </button>
             </div>
             <div
-             className={`flex justify-center p-3 absolute top-19 left-0 w-full z-11 ${menuOpen ? "" : "hidden"}`}>
+             className={`flex justify-center p-3 absolute top-10 left-0 w-full z-10 ${menuOpen ? "" : "hidden"}`}>
                 <ul className="sm:hidden top-16 left-0 mt-2 w-full rounded-2xl shadow-2xl bg-foreground text-background flex flex-col items-center gap-4 p-4 transition-transform duration-300 ease-in-out">
                 {navigation.map((item) => (
                     <li
-                        className="w-full text-center :hover:font-bold :hover:bg-background-2 :hover:text-foreground-2 p-1 rounded-2xl">                    
+                        className="w-full text-center :hover:font-bold :hover:bg-background-2 :hover:text-foreground-2 p-1 rounded-2xl" key={item.name}>                    
                         <Link 
                             href={item.href} 
                             onClick={() => setMenuOpen(false)}

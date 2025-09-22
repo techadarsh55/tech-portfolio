@@ -15,7 +15,7 @@ export default function Footer() {
 
     return (
         <>
-            <div className="p-8 pb-10 bg-[#1c2b33] text-white rounded-t-3xl relative bottom-0 w-full">
+            <div className="p-8 pb-10 bg-[#1c2b33] text-white relative bottom-0 w-full">
                 <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
                     <div className="text-center sm:text-center">
                         <span className="flex gap-1 place-items-center cursor-pointer justify-center lg:justify-start md:justify-start" onClick={() => location.href="/"}>

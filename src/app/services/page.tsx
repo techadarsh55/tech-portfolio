@@ -39,7 +39,7 @@ export default function Services() {
             {/* coding list */}
             <div className="flex flex-wrap justify-center sm:p-4 sm:gap-5 lg:gap-8 lg:p-10 md:p-8 md:gap-6 gap-4">
                 {skillList.map((skill: skillsProps) => (
-                    <div className="bg-white p-4 rounded-xl flex flex-col gap-2 items-center shadow-md hover:scale-105 transition-transform duration-300">
+                    <div className="bg-white p-4 rounded-xl flex flex-col gap-2 items-center shadow-md hover:scale-105 transition-transform duration-300" key={skill.name}>
                         <Image
                             src={skill.imgSrc}
                             alt={skill.name}

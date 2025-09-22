@@ -1,10 +1,7 @@
 import Image from "next/image";
-import Link from "next/link";
 import Projects from "./projects/page";
-import Footer from "@/components/Footer";
 import Services from "./services/page";
 import Contact from "./contact/page";
-import Skills from "./skills/page";
 import About from "./about/page";
 
 export default function Home() {
@@ -58,15 +55,14 @@ export default function Home() {
     </div>
 
     {/* Project Sections */}
-    <div className="">       
+    <div>       
       <Projects />    
     </div>
 
     {/* contact form */}
     <section>
       <Contact />
-    </section>
-
+    </section>    
     </>
   );
 }
