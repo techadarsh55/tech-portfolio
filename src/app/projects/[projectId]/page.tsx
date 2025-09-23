@@ -122,7 +122,7 @@ export default function ProjectDetail({ params }: { params: Promise<{projectId: 
 
       </div>  
     </div>
-    <Shortcut />
+    
     </>
   );
 }

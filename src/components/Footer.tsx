@@ -9,8 +9,7 @@ export default function Footer() {
         { name: 'Home', href: '/' , solid: false},
         { name: 'About', href: '/about', solid: false },
         { name: 'Services', href: '/services', solid: false },
-        { name: 'Works', href: '/projects', solid: false },
-        { name: 'Contact Me', href: '/contact', solid: true },
+        { name: 'Works', href: '/projects', solid: false }
     ]
 
     return (
