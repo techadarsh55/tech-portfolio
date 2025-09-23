@@ -65,12 +65,7 @@ export default function Home() {
     {/* Project Sections */}
     <div>       
       <Projects />    
-    </div>
-
-    {/* contact form */}
-    <section>
-      <Contact />
-    </section>    
+    </div>  
     </>
   );
 }
