@@ -17,7 +17,7 @@ import Shortcut from "@/components/Shortcut";
 
 export const metadata: Metadata = {
   title: "TechAdarsh - Portfolio",
-  description: "adarsh admane's portfolio website",
+  description: "Explore the professional portfolio of Adarsh Admane, a skilled Python Fullstack Developer specializing in modern web applications, UI/UX design, and scalable backend solutions.",
 };
 
 export default function RootLayout({
@@ -28,6 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
       </head>
       <body
