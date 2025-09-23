@@ -8,7 +8,7 @@ export default function Footer() {
     const navigation = [
         { name: 'Home', href: '/' , solid: false},
         { name: 'About', href: '/about', solid: false },
-        { name: 'Services', href: '/services', solid: false },
+        { name: 'Feature', href: '/services', solid: false },
         { name: 'Works', href: '/projects', solid: false }
     ]
 
