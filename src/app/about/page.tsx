@@ -20,6 +20,7 @@ export default function About() {
             alt="adarsh admane"
             width={450}
             height={450}
+            loading="lazy"
             className="lg:w-[512px] md:w-[250px] sm:w-[512px]" />
         </div>
         <div className="lg:max-w-3xl lg:text-start sm:text-center">

@@ -29,7 +29,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="p-8 pb-20 min-h-screen">
+    <div className="p-8 pb-20">
       <div className="text-center mb-10">
           <strong className="text-xl mb-3">CONTACT <span className="text-[#0064ec]">ME</span></strong>
           <h1 className="text-2xl sm:text-2xl lg:text-4xl md:text-3xl font-bold">I&apos;m always open to<br/> <span className="text-[#0064ec]">discussion time spand</span></h1>

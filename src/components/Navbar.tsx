@@ -18,7 +18,7 @@ export default function Navbar() {
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
-        console.log("Menu toggled:", !menuOpen);
+        // console.log("Menu toggled:", !menuOpen);
     }
 
     return (

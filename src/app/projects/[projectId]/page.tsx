@@ -40,7 +40,7 @@ export default function ProjectDetail({ params }: { params: Promise<{projectId: 
   useEffect(() => {
     async function getData() {
       const projectData = await fetchProjectData(actualParams.projectId);
-      console.log(projectData)
+      // console.log(projectData)
       if (projectData && projectData.length > 0) {
         setProjectDetail(projectData[0]);
       }
@@ -54,7 +54,7 @@ export default function ProjectDetail({ params }: { params: Promise<{projectId: 
 
   return (
     <>
-    <div className="p-10 pb-20 min-h-screen">
+    <div className="p-10 pb-20 min-h-[80%]">
       <div>
         <div className="flex justify-between">
           <span className="text-gray-500">Website Demo</span>
@@ -72,6 +72,7 @@ export default function ProjectDetail({ params }: { params: Promise<{projectId: 
           width={512}
           height={512}
           className="w-full rounded-2xl mb-3 cursor-pointer"
+          loading="lazy"
           onClick={() => {
             if (projectDetail.links) {
               router.push(projectDetail.links);

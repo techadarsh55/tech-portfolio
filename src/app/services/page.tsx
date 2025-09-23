@@ -29,7 +29,7 @@ const skillList = [
 export default function Services() {
     return (
         <>
-        <div className="p-8 pb-20 min-h-screen">
+        <div className="p-8 pb-20 ">
         <div className="pb-10">
             <div className="text-center mb-6">
                 <strong className="md:text-xl lg:text-xl sm:text-md mb-4">MY <span className="text-[#0064ec]">SKILLS</span></strong>

@@ -43,7 +43,7 @@ export default function Projects() {
         // getData('https://')
         getData('https://t1c9s2lsj8.execute-api.us-east-1.amazonaws.com/default/MyProjectDetails')
         .then(data => {
-            console.log("Fetched project data:", data);
+            // console.log("Fetched project data:", data);
             setProjectData(data as ProjectDetail[]);
         })
         .catch(error => console.error("Error fetching project data:", error));
@@ -53,7 +53,7 @@ export default function Projects() {
 
     return (
     <>
-    <div className="p-8 pb-20 lg:px-25 min-h-screen">
+    <div className="p-8 pb-20 lg:px-25">
         <div className="text-center mb-10">
           <strong className="md:text-xl lg:text-xl sm:text-md mb-4">FEATURE <span className="text-[#0064ec]">WORKS</span></strong>
           <h1 className="text-2xl sm:text-2xl lg:text-4xl md:text-3xl font-bold">A showcase of selected projects that reflect my<br/> <span className="text-[#0064ec]">skills and creativity</span></h1>

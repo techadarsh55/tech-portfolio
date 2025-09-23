@@ -16,7 +16,7 @@ export default function Home() {
     {/* Hero Section */}
     <div
       // ai
-      className="flex flex-col-reverse sm:flex-row justify-evenly items-center lg:p-20 md:p-15 sm:p-10 pb-20 gap-5 min-h-screen">
+      className="flex flex-col-reverse sm:flex-row justify-evenly items-center lg:p-20 md:p-15 sm:p-10 pb-20 gap-5 lg:min-h-screen">
       <div className="p-8">
         <p className="text-gray-400 text-sm font-semibold">WELCOME TO MY WORLD</p>
         <h1 className="font-bold mb-8 text-4xl lg:text-6xl md:text-5xl inline-he-block" style={{lineHeight: "1.2"}}>
@@ -42,10 +42,11 @@ export default function Home() {
       <div>
         
         <Image 
-          src="/images/adarsh3.png" 
+          src="/images/adarsh3.svg" 
           alt="adarsh admane" 
           width={512} 
           height={512}
+          loading="lazy"
           className="p-5 min-w-full lg:min-w-[512px] md:min-w-[450px] sm:min-w-[250px] lg:p-5 md:p-5 sm:p-5 rounded-br-[40%]"
           />
           
