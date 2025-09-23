@@ -32,12 +32,12 @@ export default function Services() {
         <div className="p-8 pb-20 min-h-screen">
         <div className="pb-10">
             <div className="text-center mb-6">
-                <strong className="text-xl  mb-3">MY <span className="text-[#0064ec]">SKILLS</span></strong>
+                <strong className="md:text-xl lg:text-xl sm:text-md mb-4">MY <span className="text-[#0064ec]">SKILLS</span></strong>
                 <h1 className="text-2xl sm:text-2xl lg:text-4xl md:text-3xl font-bold">Expert in this technical <br/> <span className="text-[#0064ec]">coding & softwares</span></h1>
             </div>
 
             {/* coding list */}
-            <div className="flex flex-wrap justify-center sm:p-4 sm:gap-5 lg:gap-8 lg:p-10 md:p-8 md:gap-6 gap-4">
+            <div className="flex flex-wrap justify-center m-auto sm:p-4 sm:gap-5 lg:gap-8 lg:p-18 lg:px-25 lg:max-w-5xl md:p-8 md:gap-6 gap-4">
                 {skillList.map((skill: skillsProps) => (
                     <div className="bg-white p-4 rounded-xl flex flex-col gap-2 items-center shadow-md hover:scale-105 transition-transform duration-300" key={skill.name}>
                         <Image
@@ -53,9 +53,9 @@ export default function Services() {
             </div>
         </div>   
 
-        <div className="">           
+        <div className="lg:px-18">           
             <div className="text-center mb-10">
-                <strong className="text-xl  mb-3">MY <span className="text-[#0064ec]">SPECIALIZATION</span></strong>
+                <strong className="md:text-xl lg:text-xl sm:text-md mb-4">MY <span className="text-[#0064ec]">SPECIALIZATION</span></strong>
                 <h1 className="text-2xl sm:text-2xl lg:text-4xl md:text-3xl font-bold">Custom development services tailored<br/> <span className="text-[#0064ec]">to business needs</span></h1>
             </div>
 

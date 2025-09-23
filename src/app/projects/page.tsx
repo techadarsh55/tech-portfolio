@@ -37,9 +37,9 @@ export default function Projects() {
 
     return (
     <>
-    <div className="p-8 pb-20 min-h-screen">
+    <div className="p-8 pb-20 lg:px-25 min-h-screen">
         <div className="text-center mb-10">
-          <strong className="text-xl mb-3">FEATURE <span className="text-[#0064ec]">WORKS</span></strong>
+          <strong className="md:text-xl lg:text-xl sm:text-md mb-4">FEATURE <span className="text-[#0064ec]">WORKS</span></strong>
           <h1 className="text-2xl sm:text-2xl lg:text-4xl md:text-3xl font-bold">A showcase of selected projects that reflect my<br/> <span className="text-[#0064ec]">skills and creativity</span></h1>
         </div>
         

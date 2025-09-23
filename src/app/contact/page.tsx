@@ -73,7 +73,7 @@ export default function Contact() {
           className="lg:min-w-[450px] md:min-w-[200px] sm:min-w-[150px]"
            />
         </div>
-        <div className="lg:min-w-3xl sm:max-w-3xl bg-white p-6 rounded-2xl shadow-md">
+        <div className="lg:min-w-3xl md:min-w-3xl sm:max-w-[80%] bg-white p-6 rounded-2xl shadow-md">
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <label

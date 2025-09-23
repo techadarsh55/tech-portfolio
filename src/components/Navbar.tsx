@@ -7,8 +7,8 @@ import { useState } from "react";
 const navigation = [
     { name: 'Home', href: '/' , solid: false},
     { name: 'About', href: '/about', solid: false },
-    { name: 'Services', href: '/services', solid: false },
-    { name: 'Works', href: '/projects', solid: false },
+    { name: 'Feature', href: '/services', solid: false },
+    { name: 'Work', href: '/projects', solid: false },
     { name: 'Contact Me', href: '/contact', solid: true },
 ]
 
@@ -24,7 +24,7 @@ export default function Navbar() {
     return (
         <>
         <div 
-            className="flex w-full justify-between items-center p-2 mt-3.5 px-3 rounded-4xl z-11 shadow-none"
+            className="flex w-full justify-between items-center p-2 mt-1 px-3 rounded-4xl z-11 shadow-none"
             style={{
             background: "var(--foreground-1)",
             color: "var(--background-1)"}}

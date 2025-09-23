@@ -33,10 +33,12 @@ export default function RootLayout({
         className=""
         >
         <div className="">
-          <div className="sticky top-2 w-full lg:p-3 sm:p-3 md:p-3 bg-transparent z-11">
+          <div className="sticky top-0 w-full lg:p-3 sm:p-3 md:p-3 z-11 bg-[#f1f5f8]">
             <Navbar />
           </div>
-          {children}
+          <div className="mt-0">
+            {children}
+          </div>
           <Footer />
         </div>
       </body>

@@ -1,11 +1,13 @@
 "use client";
 
-import { notFound, useParams } from "next/navigation";
+import { notFound, useParams, useRouter } from "next/navigation";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import Shortcut from "@/components/Shortcut";
 
 async function fetchProjectData(projectId: string) {
+  
+
   const res = await fetch(
     `https://t1c9s2lsj8.execute-api.us-east-1.amazonaws.com/default/MyProjectDetails?id=${projectId}`
   );
@@ -17,6 +19,7 @@ async function fetchProjectData(projectId: string) {
 
 export default function ProjectDetail({ params }: { params: Promise<{projectId: string }> }) {
   const [projectDetail, setProjectDetail] = useState<any>(null);
+  const router = useRouter();
 
   const actualParams = React.use(params);
 
@@ -54,9 +57,11 @@ export default function ProjectDetail({ params }: { params: Promise<{projectId: 
           alt={projectDetail.name}
           width={512}
           height={512}
-          className="w-full rounded-2xl mb-3" />
+          className="w-full rounded-2xl mb-3 cursor-pointer"
+          onClick={() => router.push(projectDetail.links)}
+           />
         
-        <div className="flex flex-wrap gap-8 justify-center mt-10 mb-10 text-center w-full">
+        <div className="flex flex-wrap gap-5 lg:gap-8 md:gap-5 sm:gap-7 justify-center mt-10 mb-10 text-center w-full">
             <div>
               <p className="text-xl text-[#0064ec] font-bold">{projectDetail.status}</p>
               <p className="text-2xl text-[#1c2b33] font-extrabold">Status</p>
@@ -88,6 +93,7 @@ export default function ProjectDetail({ params }: { params: Promise<{projectId: 
             </div>
           </div>
           <hr className="mb-8"/>
+          <h1 className="mb-4 font-bold text-2xl">Responsibilities</h1>
           <div>
             <ul className="list-decimal ml-5">
               {projectDetail.points?.map((item: any) => (
