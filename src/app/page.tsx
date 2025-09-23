@@ -20,10 +20,10 @@ export default function Home() {
       <div className="p-8">
         <p className="text-gray-400 text-sm font-semibold">WELCOME TO MY WORLD</p>
         <h1 className="font-bold mb-8 text-4xl lg:text-6xl md:text-5xl inline-he-block" style={{lineHeight: "1.2"}}>
-          Hi, I'm <span className="text-[#0064ec]">Adarsh Admane,</span> <br/>Python <span className="text-[#0064ec]">Fullstack </span>Developer
+          Hi, I&apos;m <span className="text-[#0064ec]">Adarsh Admane,</span> <br/>Python <span className="text-[#0064ec]">Fullstack </span>Developer
         </h1>
         <p className="text-gray-500 text-xl">
-          "I'm a professional software engineer. I craft modern web apps from front to back. From intuitive UIs to scalable backends, I love building clean, efficient, and user-friendly solutions.
+          I&apos;m a professional software engineer. I craft modern web apps from front to back. From intuitive UIs to scalable backends, I love building clean, efficient, and user-friendly solutions.
         </p>
         
         <div className="flex sm:flex-wrap place-items-center gap-4 pt-6">

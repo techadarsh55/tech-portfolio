@@ -1,9 +1,23 @@
 "use client";
 
-import { notFound, useParams, useRouter } from "next/navigation";
+import {useRouter } from "next/navigation";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import Shortcut from "@/components/Shortcut";
+
+type ProjectDetail = {
+  name: string;
+  description: string;
+  image: string;
+  links?: string;
+  status?: string;
+  role?: string;
+  type?: string;
+  start_date?: string;
+  end_date?: string;
+  technologies?: string[];
+  points?: string[];
+};
 
 async function fetchProjectData(projectId: string) {
   
@@ -18,7 +32,7 @@ async function fetchProjectData(projectId: string) {
 }
 
 export default function ProjectDetail({ params }: { params: Promise<{projectId: string }> }) {
-  const [projectDetail, setProjectDetail] = useState<any>(null);
+  const [projectDetail, setProjectDetail] = useState<ProjectDetail | null>(null);
   const router = useRouter();
 
   const actualParams = React.use(params);
@@ -58,7 +72,11 @@ export default function ProjectDetail({ params }: { params: Promise<{projectId: 
           width={512}
           height={512}
           className="w-full rounded-2xl mb-3 cursor-pointer"
-          onClick={() => router.push(projectDetail.links)}
+          onClick={() => {
+            if (projectDetail.links) {
+              router.push(projectDetail.links);
+            }
+          }}
            />
         
         <div className="flex flex-wrap gap-5 lg:gap-8 md:gap-5 sm:gap-7 justify-center mt-10 mb-10 text-center w-full">
@@ -87,7 +105,7 @@ export default function ProjectDetail({ params }: { params: Promise<{projectId: 
             <h1 className="text-2xl font-bold">Technologies <span className="text-[#0064ec]">I Use</span></h1>
             <br/>
             <div className="flex flex-wrap gap-4 justify-center">
-              {projectDetail.technologies?.map((item: any) => (
+              {projectDetail.technologies?.map((item: string) => (
                 <span className="bg-[#0064ec] text-white font-semibold px-3 p-2 rounded-3xl" key={item}>{item}</span>
               ))}
             </div>
@@ -96,7 +114,7 @@ export default function ProjectDetail({ params }: { params: Promise<{projectId: 
           <h1 className="mb-4 font-bold text-2xl">Responsibilities</h1>
           <div>
             <ul className="list-decimal ml-5">
-              {projectDetail.points?.map((item: any) => (
+              {projectDetail.points?.map((item: string) => (
                 <li className="text-md font-semibold pb-4" key={item}>{item}</li>
               ))}
             </ul>

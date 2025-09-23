@@ -1,6 +1,6 @@
 "use client";
 
-import { CloseBtnIcon, HomeIcon, MenuIcon, TechAdrashLogo } from "@/lib/icons";
+import { CloseBtnIcon, MenuIcon, TechAdrashLogo } from "@/lib/icons";
 import Link from "next/link";
 import { useState } from "react";
 

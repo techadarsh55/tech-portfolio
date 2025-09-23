@@ -4,8 +4,24 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React from "react";
 
+type ProjectDetail = {
+    id: number;
+  name: string;
+  description: string;
+  image: string;
+  links?: string;
+  status?: string;
+  role?: string;
+  type?: string;
+  start_date?: string;
+  end_date?: string;
+  technologies?: string[];
+  points?: string[];
+};
+
+
 export default function Projects() {
-    const [projectData, setProjectData] = React.useState<any>([]);
+    const [projectData, setProjectData] = React.useState<ProjectDetail[]|null>(null);
     const router = useRouter();
 
     function getData(url: string) {
@@ -28,7 +44,7 @@ export default function Projects() {
         getData('https://t1c9s2lsj8.execute-api.us-east-1.amazonaws.com/default/MyProjectDetails')
         .then(data => {
             console.log("Fetched project data:", data);
-            setProjectData(data);
+            setProjectData(data as ProjectDetail[]);
         })
         .catch(error => console.error("Error fetching project data:", error));
     }, []);
@@ -45,7 +61,7 @@ export default function Projects() {
         
         {/* Project Cards Grid */}
         <div className="grid grid-cols-1 p-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {projectData ? projectData.map((project: any) => (
+        {projectData && projectData.map((project: ProjectDetail) => (
             <div 
                 className="bg-white rounded-2xl shadow-md overflow-hidden hover:border-b-3 cursor-pointer hover:border-[#0064ec] hover:scale-105 duration-300 transform-3d" 
                 key={project.id}
@@ -67,7 +83,7 @@ export default function Projects() {
                 </a>
             </div>
             </div>
-        )) : ''}
+        ))}
 
         </div>
     </div>

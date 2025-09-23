@@ -23,12 +23,12 @@ export default function About() {
             className="lg:w-[512px] md:w-[250px] sm:w-[512px]" />
         </div>
         <div className="lg:max-w-3xl lg:text-start sm:text-center">
-          <h1 className="font-bold text-3xl mb-2">I'm <span className="text-[#0064ec]">Adarsh Adamane</span></h1>
-          <p className="text-gray-600 font-bold text-2xl pb-2">I’m a <span className="text-[#0064ec]"></span> creative developer who loves turning ideas into interactive, user-friendly designs<span className="text-[#0064ec]"></span>.</p>
-          <p className="pb-5 text-gray-400 text-xl">A passionate Python Fullstack Developer with expertise in building robust web applications. I specialize in both frontend and backend development, ensuring seamless user experiences and efficient server-side operations. With a strong foundation in Python, I leverage frameworks like Django and Flask to create scalable solutions. My skills extend to database management, UI/UX design, and integrating modern technologies to deliver high-quality software products. Let's connect and bring your ideas to life!</p>
+          <h1 className="font-bold text-3xl mb-2">I&apos;m <span className="text-[#0064ec]">Adarsh Adamane</span></h1>
+          <p className="text-gray-600 font-bold text-2xl pb-2">A creative developer who loves turning ideas into interactive, user-friendly designs<span className="text-[#0064ec]"></span>.</p>
+          <p className="pb-5 text-gray-400 text-xl">A passionate Python Fullstack Developer with expertise in building robust web applications. I specialize in both frontend and backend development, ensuring seamless user experiences and efficient server-side operations. With a strong foundation in Python, I leverage frameworks like Django and Flask to create scalable solutions. My skills extend to database management, UI/UX design, and integrating modern technologies to deliver high-quality software products. Let&apos;s connect and bring your ideas to life!</p>
           <button
             onClick={() => router.push('/contact')} 
-            className="font-bold bg-[#0064ec] text-white px-4 py-2 rounded-xl hover:bg-[#f1f2f8] hover:text-[#0064ec] hover:border-2">Let's Connect</button>
+            className="font-bold bg-[#0064ec] text-white px-4 py-3 rounded-xl hover:bg-[#f1f2f8] hover:text-[#0064ec] hover:border-2">Let&apos;s Connect</button>
 
           {/* projects */}
           <div className="flex flex-wrap gap-8 justify-center mt-10 text-center">
