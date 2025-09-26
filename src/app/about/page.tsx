@@ -21,7 +21,7 @@ export default function About() {
             width={450}
             height={450}
             loading="lazy"
-            className="lg:w-[512px] md:w-[250px] sm:w-[512px]" />
+            className="lg:w-[452px] md:w-[250px] sm:w-[512px]" />
         </div>
         <div className="lg:max-w-3xl lg:text-start sm:text-center">
           <h1 className="font-bold text-3xl mb-2">I&apos;m <span className="text-[#0064ec]">Adarsh Adamane</span></h1>

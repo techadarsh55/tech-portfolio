@@ -25,8 +25,9 @@ export default function Navbar() {
         <>
         <div 
             className="flex w-full justify-between items-center p-2 mt-1 px-3 rounded-4xl z-11 shadow-none"
+            
             style={{
-            background: "var(--foreground-1)",
+            background: "",
             color: "var(--background-1)"}}
             >
                 <div className="flex gap-1 place-items-center cursor-pointer" onClick={() => location.href="/"}>
@@ -41,13 +42,14 @@ export default function Navbar() {
                     className="hidden sm:flex gap-4 ml-auto place-items-center" 
                     style={{fontFamily: "var(--font-geist-sans)"}}>
                         {navigation.map((item) => (
-                            <li key={item.name}>                    
+                            <li key={item.name}
+                                >                    
                                 <Link 
                                     href={item.href} 
                                     onClick={() => setMenuOpen(false)}
                                     className={ item.solid ?
-                                        "font-bold text-lg p-2 rounded-full text-white bg-[#0064ec]"
-                                        :  ""}
+                                        "font-bold text-lg p-2 rounded-full text-white bg-[#0064ec] hover:bg-[#07459d]"
+                                        :  " hover:text-xl hover:font-bold"}
                                     >{item.name}</Link>
                             </li>
                         ))}                    

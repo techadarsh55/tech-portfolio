@@ -1,0 +1,147 @@
+/* Body setup */
+/* body {
+  margin: 0;
+  padding: 0;
+  background-color: #f1f5f8;
+  overflow-x: hidden;
+  overflow-y: hidden;
+} */
+
+/* Wave container */
+.box {
+  position: relative;
+  top: 0;
+  right: 0;
+  transform: rotate(60deg);
+  width: 100%;
+}
+
+/* Wave divs */
+.wave {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 150px;
+  height: 130px;
+  margin-left: -150px;
+  margin-top: -250px;
+  background: #0064ec;
+  opacity: 0.4;
+  border-radius: 43%;
+  transform-origin: 50% 48%;
+  /* animation: drift 7s linear infinite; */
+}
+
+.glassmorphism{
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 26px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3); 
+}
+
+.circle{
+  position: absolute;
+  width: 512px;
+  height: 512px;
+  
+}
+
+.circle.-one{
+  background: #0064ec;
+  border-radius: 50%;
+  opacity: 0.2;
+  left: -120px;
+  top: -150px;
+  width: 512px;
+  height: 512px;
+}
+
+.circle.-two{
+  background-color: #0064ec;
+  opacity: 0.5;
+  right: 0px;
+  margin-right: 0;
+  margin-top: -25%;
+  border-radius: 1% 0% 0% 65%;
+  width: 512px;
+  height: 512px;
+}
+
+.circle.-three{
+  background-color: #0064ec;
+  opacity: 0.5;
+  left: -120px;
+  top:42%;
+  margin-left: 1px;
+  margin-top: 15%;
+  border-radius: 50% 60% 50% 65%;
+  width: 320px;
+  height: 320px;
+}
+
+@media only screen and (max-width: 600px) {
+  .circle.-one{
+    background: #0064ec;
+    border-radius: 50%;
+    opacity: 0.2;
+    left: -125px;
+    top: -105px;
+    width: 350px;
+    height: 350px;
+  }
+
+  .circle.-two{
+    background-color: #0064ec;
+    opacity: 0.5;
+    right: 0px;
+    margin-right: 0;
+    margin-top: -55%;
+    border-radius: 1% 0% 0% 65%;
+    width: 152px;
+    height: 250px;
+  }
+}
+
+/* Drift keyframes */
+@keyframes drift {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Loading container */
+.contain {
+  animation-delay: 4s;
+  z-index: 1000;
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#25a7d7, #2962FF);
+}
+
+/* Loading icons */
+.icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 5px;
+}
+
+.icon img {
+  animation: scaleAnim 2s ease infinite;
+  transform: scale(0) rotateZ(180deg);
+}
+
+.icon:nth-child(2) img { animation-delay: 0.2s; }
+.icon:nth-child(3) img { animation-delay: 0.3s; }
+.icon:nth-child(4) img { animation-delay: 0.4s; }
+
+/* Scale animation keyframes */
+@keyframes scaleAnim {
+  0%   { transform: scale(0) rotateZ(-90deg); opacity: 0; }
+  30%  { transform: scale(1) rotateZ(0deg); opacity: 1; }
+  50%  { transform: scale(1) rotateZ(0deg); opacity: 1; }
+  80%  { transform: scale(0) rotateZ(90deg); opacity: 0; }
+}
