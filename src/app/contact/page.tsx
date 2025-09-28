@@ -16,7 +16,7 @@ export default function Contact() {
     const endpoint = process.env.CONTACTUS_URI
     console.log("endpoint --", endpoint)
 
-    const res = await fetch("https://3bt13dukla.execute-api.us-east-1.amazonaws.com/default/portfolio-manage", {
+    const res = await fetch("https://rqjctk7qrte77sbszqus6hn6fu0nhtea.lambda-url.us-east-1.on.aws/", {
       method: "POST",
       body: JSON.stringify(data),
       headers: { "Content-Type": "application/json" },
