@@ -13,8 +13,10 @@ export default function Contact() {
     const form = e.currentTarget;
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
+    const endpoint = process.env.CONTACTUS_URI
+    console.log("endpoint --", endpoint)
 
-    const res = await fetch("https://dem6sb1n8f.execute-api.us-east-1.amazonaws.com/default/ContactUs", {
+    const res = await fetch("https://3bt13dukla.execute-api.us-east-1.amazonaws.com/default/portfolio-manage", {
       method: "POST",
       body: JSON.stringify(data),
       headers: { "Content-Type": "application/json" },
