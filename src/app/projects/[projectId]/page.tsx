@@ -112,7 +112,7 @@ export default function ProjectDetail({ params }: { params: Promise<{projectId: 
             </div>
           </div>
           <hr className="mb-8"/>
-          <h1 className="mb-4 font-bold text-2xl">Responsibilities</h1>
+          <h1 className="mb-4 font-bold text-2xl">Features & Responsibilities</h1>
           <div>
             <ul className="list-decimal ml-5">
               {projectDetail.points?.map((item: string) => (
